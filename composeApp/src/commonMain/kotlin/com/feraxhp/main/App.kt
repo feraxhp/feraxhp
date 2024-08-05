@@ -1,6 +1,5 @@
 package com.feraxhp.main
 
-import androidx.compose.animation.core.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
@@ -11,8 +10,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-//import compose.icons.FeatherIcons
-//import compose.icons.feathericons.Github
 import com.feraxhp.main.theme.AppTheme
 import com.feraxhp.main.theme.LocalThemeIsDark
 import main.composeapp.generated.resources.*

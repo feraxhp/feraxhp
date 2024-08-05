@@ -1,0 +1,15 @@
+/* Copyright (c) 2024 feraxhp */
+
+body {
+    margin: 0px;
+    background-color: #f9faef;
+}
+
+#loaderIndicator {
+    display: flex;
+}
+
+:root {
+    --md-linear-progress-track-color: transparent;
+    --md-linear-progress-active-indicator-color: #4c662b;
+}

@@ -1,13 +1,29 @@
+<!--Copyright (c) 2024 feraxhp-->
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>feraxhp</title>
+    <title>Loading...</title>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/116177764?s=400&u=bfc9510236250ccbd2632f2fcb45988468d2537e&v=4" type="image/png">
     <script src="skiko.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
+          }
+        }
+    </script>
+    <script type="module">
+        import '@material/web/all.js';
+        import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<md-linear-progress indeterminate id="loaderIndicator"></md-linear-progress>
 <div>
     <canvas id="ComposeTarget" width="800" height="600"></canvas>
 </div>
