@@ -1,81 +1,91 @@
 package com.feraxhp.main
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Face
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.feraxhp.main.theme.AppTheme
-import com.feraxhp.main.theme.LocalThemeIsDark
-import main.composeapp.generated.resources.*
+import cafe.adriel.voyager.navigator.currentOrThrow
+import com.feraxhp.ktheme.DynamicTheme
+import com.feraxhp.ktheme.LocalThemeIsDark
+import com.feraxhp.ktheme.LocalThemeSettings
+import feraxhp.composeapp.generated.resources.Res
+import feraxhp.composeapp.generated.resources.*
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
 
 @Composable
-internal fun App() = AppTheme {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center,
-    ) {
-        var isDark by LocalThemeIsDark.current
-        val icon = remember(isDark) {
-            if (isDark) Res.drawable.ic_light_mode
-            else Res.drawable.ic_dark_mode
-        }
+internal fun App() = DynamicTheme {
 
-        ElevatedButton(
-            modifier = Modifier
-                .padding(horizontal = 8.dp, vertical = 4.dp)
-                .wrapContentWidth(align = Alignment.CenterHorizontally)
-                .align(Alignment.TopEnd)
+    val dts = LocalThemeSettings.currentOrThrow
+
+    val isDynamic = dts.useDynamicColor
+    Scaffold { paddingValues ->
+        Box(
+            modifier = Modifier.fillMaxSize()
+                    .padding(top = paddingValues.calculateTopPadding())
             ,
-            onClick = { isDark = !isDark },
-            content = {
-                Icon(vectorResource(icon), contentDescription = null)
-                Spacer(Modifier.size(ButtonDefaults.IconSpacing))
-                Text(stringResource(Res.string.theme))
-            }
-        )
-        Column (
-            modifier = Modifier.padding(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-
+            contentAlignment = Alignment.Center,
         ) {
-            Text(
-                text = "Hello!",
-                style = MaterialTheme.typography.titleLarge,
-                fontSize = 56.sp,
-                textAlign = TextAlign.Center
-            )
-
-            Text(
-                text = "This web is under construction.\n Please check it back later.",
-                textAlign = TextAlign.Center
-            )
-
-            Spacer(Modifier.size(48.dp))
-
-            ElevatedButton(
-                onClick = { openUrl("https://www.github.com/feraxhp") },
-                content = {
+            Row(
+                modifier = Modifier
+                    .padding(horizontal = 8.dp, vertical = 4.dp)
+                    .wrapContentWidth(align = Alignment.CenterHorizontally)
+                    .align(Alignment.TopEnd),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.End
+            ) {
+                var isDark by LocalThemeIsDark.current
+                val uriHandler = LocalUriHandler.current
+                TextButton(
+                    modifier = Modifier.wrapContentWidth(),
+                    onClick = { uriHandler.openUri("https://github.com/feraxhp") },
+                ) {
                     Icon(
-                        imageVector = Icons.Default.Face,
-                        tint = MaterialTheme.colorScheme.primary,
-                        contentDescription = null,
-                        modifier = Modifier.size(24.dp)
+                        modifier = Modifier.size(28.dp)
+                            .padding(end = 8.dp),
+                        imageVector = Github,
+                        contentDescription = null
                     )
-                    Spacer(Modifier.size(ButtonDefaults.IconSpacing))
-                    Text("GitHub")
+                    Text(stringResource(Res.string.open_github))
                 }
-            )
-        }
+                IconButton(
+                    modifier = Modifier,
+                    onClick = { isDark = !isDark },
+                    content = {
+                        Icon(
+                            vectorResource(
+                                if (isDark) Res.drawable.ic_light_mode
+                                else Res.drawable.ic_dark_mode
+                            ),
+                            contentDescription = null
+                        )
+                    }
+                )
+            }
 
+            Column(
+                modifier = Modifier.padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+
+            ) {
+                Text(
+                    text = "Hello!",
+                    style = MaterialTheme.typography.titleLarge,
+
+                    fontSize = 56.sp,
+                    textAlign = TextAlign.Center
+                )
+
+                Text(
+                    text = "This web is under construction.\n Please check it back later.",
+                    textAlign = TextAlign.Center
+                )
+            }
+        }
     }
 }
-
-internal expect fun openUrl(url: String?)

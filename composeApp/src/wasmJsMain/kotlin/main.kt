@@ -1,17 +1,12 @@
-import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.ExperimentalComposeUiApi
-import androidx.compose.ui.window.CanvasBasedWindow
+import androidx.compose.ui.window.ComposeViewport
 import com.feraxhp.main.App
+import kotlinx.browser.document
 
 @OptIn(ExperimentalComposeUiApi::class)
-private fun main() {
-    CanvasBasedWindow("feraxhp") {
+fun main() {
+    val body = document.body ?: return
+    ComposeViewport(body) {
         App()
-        SideEffect {
-            unSetLoader()
-        }
     }
 }
-
-fun unSetLoader(): String =
-    js("document.querySelector(\"#loaderIndicator\").style.display = \"none\"")

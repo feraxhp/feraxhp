@@ -22,22 +22,16 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.voyager.navigator)
-            implementation(libs.coil)
-            implementation(libs.coil.network.ktor)
             implementation(libs.napier)
-            implementation(libs.kotlinx.coroutines.core)
-            implementation(libs.ktor.core)
-            //implementation(libs.composeIcons.featherIcons)
             implementation(libs.kotlinx.serialization.json)
-            implementation(libs.kotlinx.datetime)
             implementation(libs.multiplatformSettings)
+            implementation(libs.ktheme)
         }
 
         commonTest.dependencies {
             implementation(kotlin("test"))
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.uiTest)
-            implementation(libs.kotlinx.coroutines.test)
         }
 
     }
