@@ -23,6 +23,8 @@ I am also experimenting with [Kotlin Multiplatform (KMP)](https://kotlinlang.org
     - Android
     - Multiplatform
 
+- Rust
+
 ## More skills
 
 - 3D Design
