@@ -40,4 +40,4 @@ I am also experimenting with [Kotlin Multiplatform (KMP)](https://kotlinlang.org
 - Español (Natal)
 - English (B1+)
 
-You can visit my web-site at: [feraxhp.com](https://feraxhp.com) 
+You can visit my web-site at: [www.feraxhp.com](https://www.feraxhp.com) 
