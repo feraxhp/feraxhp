@@ -1,5 +1,7 @@
 # [Feraxhp](https://feraxhp.com)
 
+[![GitHub Streak](https://streak-stats.demolab.com?user=feraxhp&theme=catppuccin-mocha&hide_border=true&border_radius=20&card_width=500)](https://git.io/streak-stats)
+
 I am a highly skilled mechatronics engineer with a strong focus on new technologies and a passion for programming.
 
 Currently, I work at [Avvale](https://www.avvale.com) as a Consultant specializing in cloud computing, DevOps, mobile development, and front-end technologies.
