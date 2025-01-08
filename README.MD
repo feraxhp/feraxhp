@@ -1,4 +1,4 @@
-# [Feraxhp](https://feraxhp.com)
+# [Feraxhp](https://www.feraxhp.com)
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=feraxhp&theme=catppuccin-mocha&hide_border=true&border_radius=20&card_width=500)](https://git.io/streak-stats)
 
