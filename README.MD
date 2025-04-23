@@ -95,10 +95,10 @@ Microcontroller Programming:
 
 <table>
 <tr>
-<td>🇪🇸</td><td>Español</td><td>*(Native)*</td>
+<td>🇪🇸</td><td>Español</td><td><strong>Native</strong></td>
 </tr>
 <tr>
-<td>🇬🇧</td><td>English</td><td>*(B1+)*</td>
+<td>🇬🇧</td><td>English</td><td><strong>B1+</strong></td>
 </tr>
 </table>
 
