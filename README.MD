@@ -7,6 +7,8 @@ I am a highly skilled mechatronics engineer with a strong focus on new technolog
 Currently, I work at [Avvale](https://www.avvale.com) as a Consultant specializing in cloud computing, DevOps, mobile development, and front-end technologies.
 
 I am also experimenting with [Kotlin Multiplatform (KMP)](https://kotlinlang.org/docs/multiplatform.html), and I look forward to releasing some exciting projects soon.
+
+Some rust projects have already been released , check them out
 <!-- Title -->
 <h2 align="center">🧠 My Tech Toolbox</h2>
 
@@ -23,14 +25,26 @@ I am also experimenting with [Kotlin Multiplatform (KMP)](https://kotlinlang.org
 <td>
 <ul>
 <li>Web Scraping</li>
-<li>ETLs</li>
+<li>
+<strong>ETLs</strong>
+<li>Fabric</li>
+<li>Databricks</li>
+<ul>
+</ul>
+</li>
 <li>Scripting</li>
 </ul>
 </td>
 </tr>
 <tr>
-<td><strong>☁️ AWS</strong></td>
-<td>DevOps</td>
+<td><strong>☁️ Cloud</strong></td>
+<td>
+<ul>
+<li>AWS</li>
+<li>Azure</li>
+<li>DevOps</li>
+</ul>
+</td>
 </tr>
 <tr>
 <td><strong>⚙️ C / C++</strong></td>
@@ -54,7 +68,12 @@ Microcontroller Programming:
 </tr>
 <tr>
 <td><strong>🦀 Rust</strong></td>
-<td>Exploring</td>
+<td>
+<ul>
+<li>Cli tools</li>
+<li>Derive macros</li>
+</ul>
+</td>
 </tr>
 </table>
 
@@ -72,6 +91,7 @@ Microcontroller Programming:
 <ul>
 <li>CNC</li>
 <li>FDM 3D Printing</li>
+<li>CAD</li>
 </ul>
 </td>
 </tr>
@@ -98,7 +118,7 @@ Microcontroller Programming:
 <td>🇨🇴</td><td>Español</td><td><strong>Native</strong></td>
 </tr>
 <tr>
-<td>🇬🇧</td><td>English</td><td><strong>B1+</strong></td>
+<td>🇬🇧</td><td>English</td><td><strong>B2</strong></td>
 </tr>
 </table>
 
